@@ -1,0 +1,9 @@
+<link href="https://fonts.googleapis.com/css?family=Play|Press+Start+2P" rel="stylesheet">
+
+.leaderboard * {
+  font-family: "Press Start 2P" !important;
+}
+
+body {
+  background-color: #FDF4F1;
+}

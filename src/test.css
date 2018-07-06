@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Play|Press+Start+2P');
+
+.leaderboard * {
+  font-family: "Press Start 2P";
+}
+
+label {
+  font-family: "Play";
+  font-size: 35px;
+  color: #3589E6;
+}
+
+.player-form {
+  margin-top: 75px;
+  width: 50%;
+  margin: auto;
+  font-family: "Play";
+}
+
+.match {
+  width: 75%;
+  margin: auto;
+}
+
+.selection {
+  width: 50%;
+  margin: auto;
+  height: 375px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.vs {
+  font-family: "Press Start 2P";
+  font-size: 25px;
+  margin-top: 55px;
+  color: #DF3C3D;
+}
+
+.large-spacer {
+  margin-top: 50px;
+}
+
+.small-spacer {
+  margin-top: 10px;
+}
+
+.leaderboard > h1 {
+  font-size: 50px;
+  color: #49D9EF;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.stats {
+  margin-bottom: 40px;
+  height: 340px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.podium > div > h4 {
+  color: #DF3C3D
+}
+
+h2 {
+  color: #3589E6;
+}
+
+ h4 {
+  color: #9ACF70 ;
+}
+
+body {
+  background-color: #2D2F32
+}
