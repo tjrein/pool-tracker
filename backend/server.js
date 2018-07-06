@@ -61,4 +61,5 @@ router.put('/players/:playerId', (req, res) => {
 });
 
 app.use('/api', router);
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.listen(API_PORT, () => console.log(`Listening on port ${API_PORT}`));
