@@ -61,4 +61,6 @@ app.put('/api/players/:playerId', (req, res) => {
   });
 });
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
