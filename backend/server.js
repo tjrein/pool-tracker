@@ -10,7 +10,9 @@ const API_PORT = process.env.API_PORT || 3001;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://admin:password99@ds125031.mlab.com:25031/codingchallenge_pool");
+//"mongodb://admin:password99@ds125031.mlab.com:25031/codingchallenge_pool"
+
+mongoose.connect(process.env.MONGOLAB_URI);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
