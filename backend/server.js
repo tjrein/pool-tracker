@@ -4,13 +4,11 @@ const router = express.Router();
 const app = express();
 const path = require('path');
 const Player = require('./models/players.js');
-const cors = require('cors');
 const bodyParser = require('body-parser');
 const API_PORT = process.env.API_PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
 
 mongoose.connect("mongodb://admin:password99@ds125031.mlab.com:25031/codingchallenge_pool");
 var db = mongoose.connection;
