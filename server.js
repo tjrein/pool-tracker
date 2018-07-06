@@ -9,9 +9,6 @@ const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-//"mongodb://admin:password99@ds125031.mlab.com:25031/codingchallenge_pool"
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://admin:password99@ds125031.mlab.com:25031/codingchallenge_pool");
 var db = mongoose.connection;
@@ -41,7 +38,6 @@ app.post('/api/players', (req, res) => {
     if (err) return res.json({ success: false, error: err });
     return res.json({ success: true });
   });
-
 });
 
 app.put('/api/players/:playerId', (req, res) => {
@@ -62,12 +58,4 @@ app.put('/api/players/:playerId', (req, res) => {
   });
 });
 
-  // Serve any static files
-  // Handle React routing, return all requests to React app
-  //app.get('*', function(req, res) {
-  //  res.sendFile(path.join(__dirname, 'client/build/index.html'));
-  //});
-
-//app.use('/api', router);
-//app.use(express.static(path.join(__dirname, 'client/build')));
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
