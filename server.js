@@ -1,16 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const router = express.Router();
 const app = express();
 const path = require('path');
 const Player = require('./backend/models/players.js');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 
+if ((process.env.NODE_ENV || 'development') === 'development') {
+  require('dotenv').load();
+}
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://admin:password99@ds125031.mlab.com:25031/codingchallenge_pool");
+mongoose.connect(process.env.MONGODB_URI);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
