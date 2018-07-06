@@ -5,13 +5,10 @@ import ToggleButton from './ToggleButton';
 import { Redirect } from 'react-router-dom';
 
 class Match extends Component {
-  constructor() {
-    super();
-    this.state = {
-      winner: {},
-      toLeaderboard: false
-    };
-  }
+  state = {
+    winner: {},
+    toLeaderboard: false
+  };
 
   onClick = (e) => {
     const name = e.target.innerHTML;
