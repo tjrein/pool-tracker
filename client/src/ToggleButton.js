@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Button } from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Button } from 'semantic-ui-react';
 
 class ToggleButton extends Component {
-  state = {}
+  state = {};
 
   handleClick = () => {
     this.setState({ active: !this.state.active });

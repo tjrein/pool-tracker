@@ -18,10 +18,8 @@ class NewPlayerForm extends Component {
   }
 
   onSubmit = () => {
-    console.log("this.state", this.state);
     fetch('api/players', {
       method: 'POST',
-      mode: 'cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(this.state)
     })
@@ -50,21 +48,20 @@ class NewPlayerForm extends Component {
           <h1>Add New Player</h1>
         </div>
         <div className="player-form">
-        <Form inverted size="big" onSubmit={this.onSubmit}>
-          <Form.Field>
-            <label> Player Name</label>
-            <input
-              placeholder="Player Name"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </Form.Field>
-
-        <div className="ui container center aligned">
-          <Button circular inverted  size="huge" >Submit</Button>
-        </div>
-        </Form>
+          <Form inverted size="big" onSubmit={this.onSubmit}>
+            <Form.Field>
+              <label> Player Name</label>
+              <input
+                placeholder="Player Name"
+                name="name"
+                value={name}
+                onChange={this.handleChange}
+              />
+            </Form.Field>
+            <div className="ui container center aligned">
+              <Button circular inverted  size="huge" >Submit</Button>
+            </div>
+          </Form>
         </div>
       </div>
     );

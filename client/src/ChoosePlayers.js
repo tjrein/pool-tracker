@@ -20,7 +20,7 @@ class ChoosePlayers extends Component {
     const index = selectedPlayers.indexOf(name);
 
     if (index > -1) {
-      selectedPlayers.splice(index, 1)
+      selectedPlayers.splice(index, 1);
     }
 
     if (selectedPlayers.length < 2 && index < 0) {
@@ -58,6 +58,7 @@ class ChoosePlayers extends Component {
 
     const playerNodes = data.map((player, index) => {
       let disabled = false;
+
       if (selectedPlayers.length === 2) {
         if(selectedPlayers.indexOf(player.name) < 0) {
           disabled = true;
