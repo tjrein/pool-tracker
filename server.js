@@ -16,14 +16,14 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://admin:password99@ds125031
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-router.get('/api/players', (req, res) => {
+router.get('/players', (req, res) => {
   Player.find((err, players) => {
     if (err) return res.json({ success: false, error: err });
     return res.json({ success: true, data: players });
   });
 });
 
-router.post('/api/players', (req, res) => {
+router.post('/players', (req, res) => {
   const player = new Player();
   const { name, wins } = req.body;
   if (!name) {
@@ -43,7 +43,7 @@ router.post('/api/players', (req, res) => {
 
 });
 
-router.put('/api/players/:playerId', (req, res) => {
+router.put('/players/:playerId', (req, res) => {
   const { playerId } = req.params;
   if (!playerId) {
     return res.json({ success: false, error: 'Player id not found' });
@@ -68,6 +68,6 @@ router.put('/api/players/:playerId', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/build/index.html'));
   });
 
-//app.use('/api', router);
+app.use('/api', router);
 //app.use(express.static(path.join(__dirname, 'client/build')));
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
