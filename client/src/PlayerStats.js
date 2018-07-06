@@ -23,22 +23,20 @@ const PlayerStats = (props) => {
   ));
 
   return (
-     <div className="stats">
-       <Grid centered>
-         <Grid.Row columns={3}>
-           <Grid.Column textAlign="center">
-             <h2>Rank</h2>
-           </Grid.Column>
-           <Grid.Column textAlign="center">
-             <h2>Wins</h2>
-           </Grid.Column>
-           <Grid.Column textAlign="center">
-             <h2>Name</h2>
-           </Grid.Column>
-         </Grid.Row>
-          { playerNodes }
-       </Grid>
-     </div>
+    <Grid centered>
+      <Grid.Row columns={3}>
+        <Grid.Column textAlign="center">
+           <h2>Rank</h2>
+         </Grid.Column>
+         <Grid.Column textAlign="center">
+           <h2>Wins</h2>
+         </Grid.Column>
+         <Grid.Column textAlign="center">
+           <h2>Name</h2>
+         </Grid.Column>
+       </Grid.Row>
+        { playerNodes }
+     </Grid>
   );
 };
 
