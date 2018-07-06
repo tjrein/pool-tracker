@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const app = express();
 const path = require('path');
-const Player = require('./models/players.js');
+const Player = require('./backend/models/players.js');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 
@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 //"mongodb://admin:password99@ds125031.mlab.com:25031/codingchallenge_pool"
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://admin:password99@ds125031.mlab.com:25031/codingchallenge_pool");
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
