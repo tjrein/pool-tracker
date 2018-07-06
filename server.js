@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 //"mongodb://admin:password99@ds125031.mlab.com:25031/codingchallenge_pool"
 
@@ -62,11 +63,10 @@ app.put('/api/players/:playerId', (req, res) => {
 });
 
   // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
   // Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build/index.html'));
-  });
+  //app.get('*', function(req, res) {
+  //  res.sendFile(path.join(__dirname, 'client/build/index.html'));
+  //});
 
 //app.use('/api', router);
 //app.use(express.static(path.join(__dirname, 'client/build')));
