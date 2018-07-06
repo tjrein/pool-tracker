@@ -20,7 +20,7 @@ class LeaderBoard extends Component {
   toAddPlayer = () => this.props.history.push("/addplayer");
 
   loadPlayers = () => {
-    fetch('http://localhost:3001/api/players', {mode: "cors"})
+      fetch('/api/players')
       .then(resp => resp.json())
       .then(resp => this.setState({data: resp.data}));
   }

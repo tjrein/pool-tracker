@@ -33,8 +33,7 @@ class Match extends Component {
       return;
     }
 
-    fetch(`http://localhost:3001/api/players/${_id}`, {
-      mode: "cors",
+    fetch(`api/players/${_id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({wins: wins}),

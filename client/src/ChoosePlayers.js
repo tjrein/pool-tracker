@@ -37,7 +37,7 @@ class ChoosePlayers extends Component {
   startGame = () => this.setState({toMatch: true});
 
   loadPlayers = () => {
-    fetch('http://localhost:3001/api/players', {mode: "cors"})
+    fetch('api/players')
       .then(data => data.json())
       .then(response => this.setState({data: response.data}));
   }

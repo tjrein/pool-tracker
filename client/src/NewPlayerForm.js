@@ -19,7 +19,7 @@ class NewPlayerForm extends Component {
 
   onSubmit = () => {
     console.log("this.state", this.state);
-    fetch('http://localhost:3001/api/players', {
+    fetch('api/players', {
       method: 'POST',
       mode: 'cors',
       headers: { 'Content-Type': 'application/json' },
