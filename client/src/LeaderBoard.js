@@ -5,12 +5,9 @@ import { Button, Grid } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 class LeaderBoard extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [],
-    };
-  }
+  state = {
+    data: [],
+  };
 
   componentDidMount() {
     this.loadPlayers();

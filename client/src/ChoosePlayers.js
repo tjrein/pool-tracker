@@ -6,14 +6,11 @@ import { Button, Grid } from 'semantic-ui-react';
 import ToggleButton from './ToggleButton';
 
 class ChoosePlayers extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [],
-      selectedPlayers: [],
-      toMatch: false
-    };
-  }
+  state = {
+    data: [],
+    selectedPlayers: [],
+    toMatch: false
+  };
 
   componentDidMount() {
    this.loadPlayers();
