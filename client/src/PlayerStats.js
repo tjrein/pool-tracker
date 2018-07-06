@@ -7,7 +7,6 @@ const compare = (a, b) => {
 };
 
 const PlayerStats = (props) => {
-  const styles = {};
   const playerNodes = props.data.sort(compare).map((player, ind) => (
     <Grid.Row className={ind < 3 ? "podium" : ""} columns={3}>
       <Grid.Column textAlign="center">

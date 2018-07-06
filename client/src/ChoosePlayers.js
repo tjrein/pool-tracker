@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
-import PlayerStats from './PlayerStats';
 import { Redirect } from 'react-router-dom';
 import { Button, Grid } from 'semantic-ui-react';
 import ToggleButton from './ToggleButton';

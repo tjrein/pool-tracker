@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import 'whatwg-fetch';
 import PlayerStats from './PlayerStats';
 import { Button, Grid, Loader } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
 
 class LeaderBoard extends Component {
   state = {

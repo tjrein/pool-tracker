@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
 import { Button, Grid } from 'semantic-ui-react';
-import ToggleButton from './ToggleButton';
 import { Redirect } from 'react-router-dom';
 
 class Match extends Component {

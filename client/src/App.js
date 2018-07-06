@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import LeaderBoard from './LeaderBoard';
 import NewPlayerForm from './NewPlayerForm';
 import ChoosePlayers from './ChoosePlayers';
 import Match from './Match';
-//import './test.css';
 
 class App extends Component {
   render() {
