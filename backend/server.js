@@ -5,7 +5,7 @@ const app = express();
 const path = require('path');
 const Player = require('./models/players.js');
 const bodyParser = require('body-parser');
-const API_PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
