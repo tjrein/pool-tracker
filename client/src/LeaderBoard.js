@@ -27,7 +27,7 @@ class LeaderBoard extends Component {
 
   render() {
     return (
-      <div textAlign="center" className="ui container">
+      <div className="ui container">
         <div className="leaderboard">
             <h1>Leader Board</h1>
           <PlayerStats data={this.state.data} />

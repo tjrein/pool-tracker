@@ -27,9 +27,9 @@ class Match extends Component {
   };
 
   updatePlayerWins = () => {
-    const { _id, wins } = this.state.winner
+    const { _id, wins } = this.state.winner;
 
-    if (!_id || !wins) {
+    if (!_id) {
       return;
     }
 
