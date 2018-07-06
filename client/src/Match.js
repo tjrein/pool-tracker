@@ -12,8 +12,8 @@ class Match extends Component {
 
   onClick = (e) => {
     const name = e.target.innerHTML;
-    const data = this.props.location.state.data;
-    const selectedPlayer = data.find(player => name === player.name);
+    const players = this.props.location.state.players;
+    const selectedPlayer = players.find(player => name === player.name);
     let winner = {};
 
     if (selectedPlayer.name !== this.state.winner.name) {
@@ -55,17 +55,17 @@ class Match extends Component {
       )
     }
 
-    const toggleButtons = players.map(name => {
+    const toggleButtons = players.map(player => {
       let active = false;
 
-      if (Object.keys(winner).length && name === winner.name) {
+      if (Object.keys(winner).length && player.name === winner.name) {
         active = true;
       }
 
       return (
         <Grid.Column textAlign="center">
           <Button basic circular size="big" inverted toggle active={active} onClick={this.onClick}>
-            {name}
+            {player.name}
           </Button>
         </Grid.Column>
       )

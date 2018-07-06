@@ -43,11 +43,15 @@ class ChoosePlayers extends Component {
     const {data, selectedPlayers, toMatch} = this.state;
 
     if (toMatch && selectedPlayers.length === 2) {
+      const playerObjects = data.filter(player => {
+        return selectedPlayers.indexOf(player.name) > -1
+      });
+
       return (
         <Redirect
           to={{
             pathname: '/match',
-            state: {players: selectedPlayers, data: data}
+            state: {players: playerObjects}
           }}
         />
       )
