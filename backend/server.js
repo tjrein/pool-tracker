@@ -5,7 +5,7 @@ const app = express();
 const path = require('path');
 const Player = require('./models/players.js');
 const bodyParser = require('body-parser');
-const API_PORT = process.env.API_PORT || 3001;
+const API_PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -63,4 +63,4 @@ router.put('/players/:playerId', (req, res) => {
 
 app.use('/api', router);
 app.use(express.static(path.join(__dirname, 'client/build')));
-app.listen(API_PORT, () => console.log(`Listening on port ${API_PORT}`));
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
